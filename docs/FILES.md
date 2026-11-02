@@ -1,0 +1,65 @@
+# Created project files
+
+All source and documentation files created for this application are listed below. Local secrets, installed dependencies, database state, generated build files and browser reports are excluded.
+
+- `.dev.vars.example`
+- `.gitignore`
+- `.prettierignore`
+- `DEPLOYMENT.md`
+- `README.md`
+- `docs/CONFIGURATION.md`
+- `docs/FILES.md`
+- `docs/TESTING.md`
+- `index.html`
+- `migrations/0001_initial.sql`
+- `package-lock.json`
+- `package.json`
+- `playwright.config.ts`
+- `scripts/check-deployment.mjs`
+- `scripts/setup-local.mjs`
+- `shared/geometry.ts`
+- `shared/pricing.ts`
+- `shared/seo.ts`
+- `shared/types.ts`
+- `src/App.tsx`
+- `src/api.ts`
+- `src/components/EstimatePanel.tsx`
+- `src/components/Layout.tsx`
+- `src/components/PropertyMap.tsx`
+- `src/components/Turnstile.tsx`
+- `src/components/map-data.ts`
+- `src/components/maps-loader.ts`
+- `src/components/property-map.css`
+- `src/main.tsx`
+- `src/pages/About.tsx`
+- `src/pages/Admin.tsx`
+- `src/pages/Contact.tsx`
+- `src/pages/Gallery.tsx`
+- `src/pages/Home.tsx`
+- `src/pages/Legal.tsx`
+- `src/pages/Quote.tsx`
+- `src/pages/Receipt.tsx`
+- `src/pages/Services.tsx`
+- `src/styles.css`
+- `tests/backend.test.ts`
+- `tests/e2e/site.spec.ts`
+- `tests/email.test.ts`
+- `tests/geometry.test.ts`
+- `tests/map-data.test.ts`
+- `tests/pricing.test.ts`
+- `tests/property-map.test.tsx`
+- `tests/quote-ui.test.tsx`
+- `tsconfig.json`
+- `vite.config.ts`
+- `vitest.config.ts`
+- `worker/config.ts`
+- `worker/email.ts`
+- `worker/env.ts`
+- `worker/index.ts`
+- `worker/outbox.ts`
+- `worker/security.ts`
+- `worker/storage.ts`
+- `worker/validation.ts`
+- `wrangler.jsonc`
+
+Local-only generated files include `.dev.vars` (random administrator token), `.wrangler/` (local D1 data), `node_modules/`, `dist/`, `test-results/`, and `playwright-report/`. These are intentionally ignored and are not included in the source archive.

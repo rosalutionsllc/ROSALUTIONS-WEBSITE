@@ -1,0 +1,18 @@
+# Copy to .dev.vars for LOCAL development only. Never commit .dev.vars.
+APP_ENV=local
+APP_URL=http://localhost:5173
+EMAIL_MODE=preview
+# Generate a random local token, e.g. PowerShell: [guid]::NewGuid().ToString('N') + [guid]::NewGuid().ToString('N')
+LOCAL_ADMIN_TOKEN=
+# Public browser key: restrict HTTP referrers + Maps JavaScript API/Places API (New).
+GOOGLE_MAPS_API_KEY=
+# Server-only Geocoding API key is required for production quote verification.
+GOOGLE_MAPS_SERVER_KEY=
+TURNSTILE_SITE_KEY=
+TURNSTILE_SECRET_KEY=
+RESEND_API_KEY=
+EMAIL_FROM=
+ACCESS_TEAM_DOMAIN=
+ACCESS_AUD=
+ADMIN_EMAIL=rosalutionsllc@gmail.com
+BUSINESS_PHONE=(813) 898-4392
