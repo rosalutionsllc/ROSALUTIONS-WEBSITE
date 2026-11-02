@@ -37,7 +37,7 @@ export function getPublicConfig(env: Env): PublicConfig {
       description:
         env.BUSINESS_DESCRIPTION ||
         "Thoughtful exterior cleaning, clear communication, and a fresh start for your property.",
-      logoUrl: env.BUSINESS_LOGO_URL || "",
+      logoUrl: env.BUSINESS_LOGO_URL || "/brand/rosalutions-logo.png",
       googleBusinessUrl: env.BUSINESS_GOOGLE_PROFILE_URL || "",
       socialUrls: (env.BUSINESS_SOCIAL_URLS || "")
         .split(",")

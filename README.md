@@ -57,7 +57,7 @@ Browser tests use local D1, require `.dev.vars`, and refuse production/live emai
 
 Default prices are $0.21/sq. ft. per service and one $150 minimum per visit. Tax defaults to zero pending owner confirmation. Special conditions and jobs over 5,000 sq. ft. request manual review. Requests never confirm an appointment.
 
-Official logos and customer-approved before/after photos can be added later. Phone **(813) 898-4392 must be confirmed by the owner before deployment**. Privacy and terms are clearly labeled review templates.
+The header and footer use the logo prepared from the supplied business card, with a matching black, cyan and electric-blue theme. Customer-approved before/after photos can be added later. Phone **(813) 898-4392 must be confirmed by the owner before deployment**. Privacy and terms are clearly labeled review templates.
 
 ## Architecture and limits
 

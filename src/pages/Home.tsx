@@ -29,12 +29,12 @@ function PropertyIllustration() {
       >
         <defs>
           <linearGradient id="lawn" x1="0" y1="0" x2="1" y2="1">
-            <stop stopColor="#b7c9b1" />
-            <stop offset="1" stopColor="#829b82" />
+            <stop stopColor="#558b91" />
+            <stop offset="1" stopColor="#254d56" />
           </linearGradient>
           <linearGradient id="drive" x1="0" y1="0" x2="0" y2="1">
-            <stop stopColor="#b7c8c6" />
-            <stop offset="1" stopColor="#e6ece3" />
+            <stop stopColor="#92b5c4" />
+            <stop offset="1" stopColor="#d0e6ee" />
           </linearGradient>
           <pattern
             id="grid"
@@ -45,7 +45,7 @@ function PropertyIllustration() {
             <path
               d="M 40 0 L 0 0 0 40"
               fill="none"
-              stroke="#214d46"
+              stroke="#357688"
               strokeWidth=".45"
               opacity=".25"
             />
@@ -55,72 +55,72 @@ function PropertyIllustration() {
               dx="3"
               dy="14"
               stdDeviation="12"
-              floodColor="#143c38"
+              floodColor="#00070f"
               floodOpacity=".18"
             />
           </filter>
         </defs>
-        <rect width="680" height="590" fill="#dbe3d5" />
+        <rect width="680" height="590" fill="#17303d" />
         <rect width="680" height="590" fill="url(#grid)" />
-        <path d="M-50 416 460 125 760 296 250 592Z" fill="#9caf98" />
+        <path d="M-50 416 460 125 760 296 250 592Z" fill="#315463" />
         <path d="M12 390 402 167 652 310 260 535Z" fill="url(#lawn)" />
-        <path d="M-20 451 505 150 539 171 14 472Z" fill="#e7e9df" />
-        <path d="M-20 481 515 175 765 318 232 623Z" fill="#a8b7ad" />
+        <path d="M-20 451 505 150 539 171 14 472Z" fill="#7896a6" />
+        <path d="M-20 481 515 175 765 318 232 623Z" fill="#385767" />
         <path
           d="M-20 506 540 185"
-          stroke="#e1e7dc"
+          stroke="#95b6c8"
           strokeWidth="3"
           strokeDasharray="38 28"
         />
         <path d="M337 325 430 274 571 355 477 410Z" fill="url(#drive)" />
         <path
           d="M338 327 430 274 571 355 477 410Z"
-          fill="#1670e7"
+          fill="#00c5f4"
           fillOpacity=".23"
-          stroke="#1a72e8"
+          stroke="#00c5f4"
           strokeWidth="3"
           strokeDasharray="7 5"
         />
         <path
           d="M110 277 270 185 435 280 274 373Z"
-          fill="#627e6b"
+          fill="#0c2633"
           opacity=".28"
           transform="translate(22 20)"
         />
         <g filter="url(#shadow)">
-          <path d="M143 258 291 173 426 250 278 335Z" fill="#f1eee0" />
-          <path d="M143 258 278 335 278 260 143 182Z" fill="#f1eee0" />
-          <path d="M278 335 426 250 426 175 278 260Z" fill="#d6ddcf" />
-          <path d="M120 189 268 103 447 176 299 261Z" fill="#31483d" />
-          <path d="M120 189 268 103 293 175 299 261Z" fill="#42594b" />
-          <path d="M293 175 447 176 299 261Z" fill="#2d4439" />
-          <path d="M268 103 447 176 293 175Z" fill="#59695a" />
-          <path d="M160 229 184 242 184 278 160 264Z" fill="#7a9d9c" />
-          <path d="M206 256 230 270 230 306 206 292Z" fill="#7a9d9c" />
-          <path d="M305 272 405 215 405 252 305 309Z" fill="#a7b9b1" />
+          <path d="M143 258 291 173 426 250 278 335Z" fill="#dae5e9" />
+          <path d="M143 258 278 335 278 260 143 182Z" fill="#dae5e9" />
+          <path d="M278 335 426 250 426 175 278 260Z" fill="#9eb4c1" />
+          <path d="M120 189 268 103 447 176 299 261Z" fill="#142331" />
+          <path d="M120 189 268 103 293 175 299 261Z" fill="#213847" />
+          <path d="M293 175 447 176 299 261Z" fill="#0d202e" />
+          <path d="M268 103 447 176 293 175Z" fill="#38505e" />
+          <path d="M160 229 184 242 184 278 160 264Z" fill="#43a5c1" />
+          <path d="M206 256 230 270 230 306 206 292Z" fill="#43a5c1" />
+          <path d="M305 272 405 215 405 252 305 309Z" fill="#7895a6" />
           <path
             d="M305 283 405 226M305 294 405 237"
-            stroke="#d6ddcf"
+            stroke="#9eb4c1"
             strokeWidth="2"
           />
           <path
             d="M342 128 342 91 365 78 388 91 388 146 367 157Z"
-            fill="#cad0c4"
+            fill="#a4bdc8"
           />
-          <path d="M342 91 365 78 388 91 365 104Z" fill="#e6e9df" />
-          <path d="M365 104 388 91 388 146 365 158Z" fill="#bac3b5" />
+          <path d="M342 91 365 78 388 91 365 104Z" fill="#c7dce4" />
+          <path d="M365 104 388 91 388 146 365 158Z" fill="#7699ab" />
         </g>
-        <g fill="#587b5b">
+        <g fill="#28595b">
           <circle cx="118" cy="328" r="30" />
-          <circle cx="100" cy="317" r="22" fill="#69896a" />
-          <circle cx="113" cy="303" r="20" fill="#789578" />
+          <circle cx="100" cy="317" r="22" fill="#35716f" />
+          <circle cx="113" cy="303" r="20" fill="#4c8c85" />
           <circle cx="483" cy="242" r="26" />
-          <circle cx="474" cy="227" r="23" fill="#789578" />
+          <circle cx="474" cy="227" r="23" fill="#4c8c85" />
           <circle cx="318" cy="422" r="34" />
-          <circle cx="301" cy="404" r="27" fill="#6d906c" />
-          <circle cx="324" cy="396" r="24" fill="#809e79" />
+          <circle cx="301" cy="404" r="27" fill="#37746f" />
+          <circle cx="324" cy="396" r="24" fill="#56968e" />
         </g>
-        <g fill="white" stroke="#1a72e8" strokeWidth="3">
+        <g fill="white" stroke="#00c5f4" strokeWidth="3">
           <circle cx="338" cy="327" r="5" />
           <circle cx="430" cy="274" r="5" />
           <circle cx="571" cy="355" r="5" />
@@ -133,12 +133,12 @@ function PropertyIllustration() {
           strokeWidth="1.5"
         />
         <g transform="translate(43 477)">
-          <circle r="21" fill="#f3f5ec" />
-          <path d="m0-11 6 18-6-4-6 4Z" fill="#254d46" />
+          <circle r="21" fill="#cce4ed" />
+          <path d="m0-11 6 18-6-4-6 4Z" fill="#143c4d" />
           <text
             y="-29"
             textAnchor="middle"
-            fill="#254d46"
+            fill="#143c4d"
             fontSize="10"
             fontFamily="Arial"
           >

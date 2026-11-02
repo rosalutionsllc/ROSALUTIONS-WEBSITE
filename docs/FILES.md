@@ -21,6 +21,8 @@ All source and documentation files created for this application are listed below
 - `shared/pricing.ts`
 - `shared/seo.ts`
 - `shared/types.ts`
+- `public/brand/rosalutions-logo.png`
+- `src/brand-theme.css`
 - `src/App.tsx`
 - `src/api.ts`
 - `src/components/EstimatePanel.tsx`

@@ -26,7 +26,7 @@ Local values go in ignored `.dev.vars`. Production non-secret variables go in `w
 | `BUSINESS_PHONE`              | Variable          | Default `(813) 898-4392`. **Confirm with owner before deployment.**                                                                                              |
 | `BUSINESS_SERVICE_AREA`       | Variable          | Display text; defaults to Tampa Bay, Brandon & Hillsborough County. No ZIP-code exclusion is enforced.                                                           |
 | `BUSINESS_DESCRIPTION`        | Variable          | About text and structured-data description.                                                                                                                      |
-| `BUSINESS_LOGO_URL`           | Variable          | Path or HTTPS URL of the official logo. Empty means text business name; no invented official logo.                                                               |
+| `BUSINESS_LOGO_URL`           | Variable          | Path or HTTPS URL of the official logo. Defaults to the logo prepared from the owner-provided business card at `/brand/rosalutions-logo.png`.                    |
 | `BUSINESS_GOOGLE_PROFILE_URL` | Variable          | Actual Google Business Profile link; absent until owner provides it.                                                                                             |
 | `BUSINESS_SOCIAL_URLS`        | Variable          | Comma-separated HTTPS social profile links.                                                                                                                      |
 | `PRICING_JSON`                | Variable          | Full pricing configuration below; omit to use defaults.                                                                                                          |
@@ -70,7 +70,7 @@ These are geometry bounds, not service-area ZIP restrictions. The owner decides 
 
 ## Logo and project gallery
 
-Place the real logo under `public/` and set `BUSINESS_LOGO_URL`, for example `/official-logo.webp`. Use the file you actually supply; that example does not already exist.
+The header and footer use `public/brand/rosalutions-logo.png`, isolated from the owner-provided `Back.pdf`. The black, cyan and electric-blue theme lives in `src/brand-theme.css`. To supply an original vector or another approved logo later, place it under `public/` and set `BUSINESS_LOGO_URL` to its path.
 
 Place customer-approved photos under `public/projects/`, optimize to WebP/AVIF, remove identifying metadata as appropriate, and add pairs to `PROJECT_PHOTOS` in `src/pages/Gallery.tsx`. Each pair needs `id`, `title`, `location`, `before`, `after`, `beforeAlt`, `afterAlt`. The existing comparison slider supports multiple pairs and keyboard control. Until photos are supplied, the gallery honestly states that real photos will be added.
 

@@ -37,12 +37,20 @@ export default function Layout({
         <div className="container header-inner">
           <Link className="brand" to="/" aria-label={`${business.name} home`}>
             {business.logoUrl ? (
-              <img src={business.logoUrl} alt="" className="brand-logo" />
-            ) : null}
-            <span className="brand-text">
-              {business.name.replace(/ Pressure Washing$/i, "")}
-              <span>PRESSURE WASHING</span>
-            </span>
+              <img
+                src={business.logoUrl}
+                alt={business.name}
+                className="brand-logo"
+                width="2168"
+                height="724"
+                fetchPriority="high"
+              />
+            ) : (
+              <span className="brand-text">
+                {business.name.replace(/ Pressure Washing$/i, "")}
+                <span>PRESSURE WASHING</span>
+              </span>
+            )}
           </Link>
           <button
             type="button"
@@ -76,10 +84,21 @@ export default function Layout({
         <div className="container footer-grid">
           <div>
             <Link className="brand footer-brand" to="/">
-              <span className="brand-text">
-                {business.name.replace(/ Pressure Washing$/i, "")}
-                <span>PRESSURE WASHING</span>
-              </span>
+              {business.logoUrl ? (
+                <img
+                  src={business.logoUrl}
+                  alt={business.name}
+                  className="brand-logo"
+                  width="2168"
+                  height="724"
+                  loading="lazy"
+                />
+              ) : (
+                <span className="brand-text">
+                  {business.name.replace(/ Pressure Washing$/i, "")}
+                  <span>PRESSURE WASHING</span>
+                </span>
+              )}
             </Link>
             <p>
               A fresh start for the place
