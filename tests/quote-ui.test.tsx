@@ -159,3 +159,44 @@ it("reuses the submission key after a network failure and flags special conditio
     JSON.parse(String(send.mock.calls[1][1]?.body)).idempotencyKey,
   );
 });
+
+it("explains missing Maps setup and makes local preview delivery explicit", () => {
+  render(
+    <BrowserRouter>
+      <Quote config={config} />
+    </BrowserRouter>,
+  );
+  const button = screen.getByRole("button", {
+    name: "Email My Quote & Request Service",
+  }) as HTMLButtonElement;
+  expect(button.disabled).toBe(true);
+  expect(
+    document.getElementById(button.getAttribute("aria-describedby")!)
+      ?.textContent,
+  ).toContain("Property maps are unavailable");
+  expect(screen.getByText(/Local email preview mode/)).toBeTruthy();
+});
+
+it("explains missing production verification after a valid outline without offering a bypass", () => {
+  config.production = true;
+  config.mapsApiKey = "test-browser-key";
+  render(
+    <BrowserRouter>
+      <Quote config={config} />
+    </BrowserRouter>,
+  );
+  fireEvent.click(
+    screen.getByRole("button", {
+      name: "Select a property and draw a driveway",
+    }),
+  );
+  const button = screen.getByRole("button", {
+    name: "Email My Quote & Request Service",
+  }) as HTMLButtonElement;
+  expect(button.disabled).toBe(true);
+  expect(
+    document.getElementById(button.getAttribute("aria-describedby")!)
+      ?.textContent,
+  ).toContain("submission verification is unavailable");
+  expect(screen.queryByText(/Local email preview mode/)).toBeNull();
+});

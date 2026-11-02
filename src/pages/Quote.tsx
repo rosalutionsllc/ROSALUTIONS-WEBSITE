@@ -48,6 +48,19 @@ export default function Quote({ config }: { config: PublicConfig }) {
       };
     }
   }, [areas, property, config.pricing, conditions]);
+  const submissionBlocker = !property
+    ? config.mapsApiKey
+      ? "Select your property address from the map’s search suggestions first."
+      : "Property maps are unavailable, so an instant estimate cannot be submitted yet. You can request a custom quote instead."
+    : !areas.length
+      ? "Draw and finish at least one cleaning-area outline on the map first."
+      : calculation.error
+        ? `Please correct your outlines: ${calculation.error}`
+        : config.production && !config.turnstileSiteKey
+          ? "Online submission verification is unavailable. Please contact us to request service."
+          : config.production && !token
+            ? "Complete the verification above before submitting your quote."
+            : "";
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     if (!property || !calculation.estimate || busy) return;
@@ -311,8 +324,31 @@ export default function Quote({ config }: { config: PublicConfig }) {
                     {error}
                   </p>
                 )}
+                {!config.production && config.emailMode === "preview" && (
+                  <p className="notice">
+                    Local email preview mode: requests are saved, but no email
+                    is sent to your inbox. View the saved email previews in the{" "}
+                    <Link to="/admin">owner dashboard</Link>.
+                  </p>
+                )}
+                {submissionBlocker && (
+                  <p
+                    id="quote-submission-blocker"
+                    className="notice"
+                    role="status"
+                  >
+                    {submissionBlocker}{" "}
+                    {(!config.mapsApiKey ||
+                      (config.production && !config.turnstileSiteKey)) && (
+                      <Link to="/contact">Request a custom quote</Link>
+                    )}
+                  </p>
+                )}
                 <button
                   className="button"
+                  aria-describedby={
+                    submissionBlocker ? "quote-submission-blocker" : undefined
+                  }
                   disabled={
                     busy ||
                     !calculation.estimate ||
